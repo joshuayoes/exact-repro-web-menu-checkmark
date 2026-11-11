@@ -1,0 +1,21 @@
+routes nav
+  home "/"
+
+component App
+  state filter = "all"
+  action show(f: string)
+    filter = f
+  view
+    main testId="root" navigationKey=`${top(nav).id}` width="100%" height="100%"
+      for e in stack(nav) key=e.id
+        column navigationKey=`${e.id}` position="absolute" inset=0
+          header display="flex" align-items="center" padding="8px 16px"
+            text "Filter" role="heading" aria-level=1 flex=1
+            button popovertarget="menu" aria-label="Filter" testId="open"
+              image "symbol:more"
+          text `Showing ${filter}` padding=16 testId="showing"
+          column id="menu" popover="auto" role="menu"
+            button role="menuitemradio" aria-checked=(filter == "all") press=show("all") popovertarget="menu" popovertargetaction="hide" testId="all"
+              text "All"
+            button role="menuitemradio" aria-checked=(filter == "active") press=show("active") popovertarget="menu" popovertargetaction="hide" testId="active"
+              text "Active"

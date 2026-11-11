@@ -1,0 +1,5 @@
+test "the menu changes the filter"
+  expect text "showing" == "Showing all"
+  tap "open"
+  tap "active"
+  expect text "showing" == "Showing active"

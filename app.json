@@ -1,0 +1,20 @@
+{
+  "$schema": "../exact/scripts/app.schema.json",
+  "name": "Web Menu Checkmark",
+  "short_name": "Web Menu Checkmark",
+  "id": "com.example.web-menu-checkmark-90970e",
+  "start_url": "/",
+  "display": "standalone",
+  "app": {
+    "id": "com.example.web-menu-checkmark-90970e",
+    "name": "Web Menu Checkmark"
+  },
+  "host": {
+    "web": {}
+  },
+  "deploy": {
+    "store": {
+      "web": "0"
+    }
+  }
+}
