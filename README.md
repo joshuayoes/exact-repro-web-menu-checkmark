@@ -1,5 +1,7 @@
 # Web: a checked `menuitemradio` shows no checkmark
 
+Reported in [expo/exact#103](https://github.com/expo/exact/issues/103).
+
 A popover `role="menu"` with two `role="menuitemradio"` buttons, the selected one `aria-checked`. On
 iOS the checked item has a checkmark: `host/apple/Sources/ExactKit/IOS/MenuItemsIOS.swift:74` sets
 `action.state = .on` on a checked row, and UIMenu draws that as a checkmark. The web host draws both
